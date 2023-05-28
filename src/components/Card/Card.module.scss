@@ -1,0 +1,67 @@
+.container {
+    width: 210px;
+    height: 260px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+.container:hover {
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+}
+
+.wrapperLike {
+    position: relative;
+}
+
+.like {
+    position: absolute;
+    margin: 29px 0 0 36px;
+}
+
+.card {
+    margin: 20px 44px 14px 33px;
+    width: 133px;
+    height: 112px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin: 0 29px 14px 31px;
+}
+
+.wrapperPrice {
+    margin: 14px 29px 34px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #BDBDBD;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+}
+
+.sum {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    display: flex;
+    justify-content: flex-start;
+}
