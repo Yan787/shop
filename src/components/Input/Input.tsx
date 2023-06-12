@@ -1,6 +1,11 @@
+//  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+//     if (event.key === "Enter") {
+//       onClickSearchButton();
+//     }
+//   };
 import React, { ChangeEvent, FC, KeyboardEvent } from "react";
-// import styles from "./Input.module.scss";
-import "./Input.module.scss";
+import styles from "./Input.module.scss";
+
 type InputProps = {
   value?: string;
   onChange: (value: string) => void;
@@ -19,8 +24,10 @@ const Input: FC<InputProps> = ({
     onChange(e.target.value);
   };
   return (
-    <div className={"container"}>
+    <div className={styles.container}>
+      <img className={styles.icon} src="/img/search.svg" alt="search" />
       <input
+        className={styles.input}
         value={value}
         onKeyDown={onKeyDown}
         placeholder={placeholder}
@@ -31,9 +38,3 @@ const Input: FC<InputProps> = ({
   );
 };
 export default Input;
-
-//  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-//     if (event.key === "Enter") {
-//       onClickSearchButton();
-//     }
-//   };
