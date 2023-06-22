@@ -89,6 +89,9 @@
     height: 55px;
     background: #9DD558;
     background-color: #0011ff64;
+    background: linear-gradient(90deg, #a001ab, #0091ff, #9b2be1);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     border-radius: 18px;
     display: flex;
     align-items: center;
@@ -117,3 +120,84 @@
     left: 53px;
 }
 
+.ontainerBasket {
+    display: flex;
+    flex-direction: column;
+    padding: 110px 0 0 0 ;
+}
+
+.EmptyStateImg {
+    margin: auto;
+}
+
+.titleBasket {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    margin: auto;
+    margin-top: 21px;
+}
+
+.textBasket {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.4;
+    width: 285px;
+    margin: auto;
+    margin-top: 9px;
+}
+
+.btnBasket {
+    width: 245px;
+    height: 55px;
+    background-color: #0011ff64;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+    transition: all .1s;
+}
+
+.btnBasket:hover {
+    border-radius: 30px;
+    transition: all .15s;
+    cursor: pointer;
+}
+
+.btnBasket:active {
+    transition: all .1s;
+    background-color: #000000;
+    .arrowBasket {
+        transform: translateX(-13px);
+        transition: all .1s;
+    }
+}
+
+.arrowBasket {
+    position: relative;
+    transition: all .5s;
+    left: -16.5px;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    }

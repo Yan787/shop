@@ -1,7 +1,7 @@
 //  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-//     if (event.key === "Enter") {
-//       onClickSearchButton();
-//     }
+// if (event.key === "Enter") {
+//   onClickSearchButton();
+// }
 //   };
 import React, { ChangeEvent, FC, KeyboardEvent } from "react";
 import styles from "./Input.module.scss";

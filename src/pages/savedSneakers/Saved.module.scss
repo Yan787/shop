@@ -1,0 +1,81 @@
+.wrapper {
+    padding: 0 60px 50px 60px;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    margin: 39px 0 40px 0;
+  }
+  
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    margin: 90px 0
+} 
+
+.img {
+    margin: 0 auto 24px;
+}
+
+.title {
+    margin: 0 auto 11px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+}
+
+
+.EmptyStateText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.4;
+    margin: 0 auto 70px;
+}
+
+.btn {
+    margin: 0 auto 80px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 245px;
+    height: 55px;
+    left: 503px;
+    top: 688px;
+    background-color: #000000;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .15s;
+}
+
+.btn:hover {
+    border-radius: 30px;
+    transition: all .15s;
+    cursor: pointer;
+}
+
+.btn:active {
+    transition: all .1s;
+    .arrowBasket {
+        transform: translateX(-13px);
+        transition: all .1s;
+    }
+}
+
+.arrowBasket {
+    position: relative;
+    transition: all .5s;
+    left: -16.5px;
+}
+

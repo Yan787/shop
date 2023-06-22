@@ -4,7 +4,6 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 
-  /* background-color: #e7f6ff; */
   background: linear-gradient(90deg, #ff3c00, #ff0062, #5e4cff, #0affc6);
   background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -20,33 +19,6 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.container {
-  max-width: 1080px;
-  background: #FFFFFF;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 20px;
-  margin: 20px auto;
-  box-sizing: border-box;
-}
-
-.wrapper {
-  padding: 0 60px 50px 60px;
-}
-
-.sneakersSearch {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 39px 0 40px 0;
-}
-
-.text {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
-  color: #000000;
 }
 
 @media screen and (max-width: 1080px)  {

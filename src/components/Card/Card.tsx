@@ -12,12 +12,18 @@ type CardProps = {
 const Card: FC<CardProps> = ({ card, size }) => {
   const { id, img, title, price } = card;
   const isSmall = size === CardSize.Small;
-  const [isOpened, setOpened] = useState(false);
+  const isLikedSize = size === CardSize.liked;
+
+  const [isAdd, setAdd] = useState(false);
   const [isLiked, setLiked] = useState(false);
 
+  const [saveToCart, setSaveToCart]: any = useState([]);
+
   const onChangeOpened = () => {
-    setOpened(!isOpened);
+    setAdd(!isAdd);
+    setSaveToCart((prev: any) => [...saveToCart, card]);
   };
+  console.log(saveToCart);
   const onChangelike = () => {
     setLiked(!isLiked);
   };
@@ -34,10 +40,16 @@ const Card: FC<CardProps> = ({ card, size }) => {
         })}
         onClick={onChangelike}
       >
+        {isLikedSize && <img className={styles.like} src="/img/Liked.svg" />}
         {isLiked ? (
           <img className={styles.like} src="/img/Liked.svg" />
         ) : (
-          <img className={styles.like} src="/img/LikeSneakers.svg" />
+          <img
+            className={classNames(styles.like, {
+              [styles.likeSavedCard]: isLikedSize,
+            })}
+            src="/img/LikeSneakers.svg"
+          />
         )}
       </div>
       <img
@@ -46,7 +58,7 @@ const Card: FC<CardProps> = ({ card, size }) => {
       />
       <div className={classNames(styles.text, { [styles.textSmall]: isSmall })}>
         {title}
-        {isSmall && <div className={styles.sumSmall}>12 999 руб.</div>}
+        {isSmall && <div className={styles.sumSmall}>{price} руб.</div>}
       </div>
       <div
         className={classNames(styles.wrapperPrice, {
@@ -83,7 +95,7 @@ const Card: FC<CardProps> = ({ card, size }) => {
           })}
           onClick={onChangeOpened}
         >
-          {isOpened ? <img src="/img/added.svg" /> : <img src="/img/add.svg" />}
+          {isAdd ? <img src="/img/added.svg" /> : <img src="/img/add.svg" />}
         </div>
       </div>
     </div>

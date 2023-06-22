@@ -11,6 +11,7 @@ const PagesContainer = () => {
   const onClickOpenBasket = () => {
     setIsOpened(!isOpened);
   };
+
   return (
     <div className={styles.mainInfo}>
       <Heder onClickOpenBasket={onClickOpenBasket} />

@@ -9,4 +9,5 @@ export type CardListType = CardType[]
 
 export enum CardSize {
     Small,
+    liked,
 }
